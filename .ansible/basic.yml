@@ -1,0 +1,16 @@
+- hosts: localhost
+  become: true
+  tasks:
+  - name: Install packages
+    apt: name={{item}}
+    with_items:
+      - htop
+      - vim
+      - vim-doc
+      - vim-scripts
+      - git
+      - patch
+      - less
+      - git-doc
+      - git-email
+      
