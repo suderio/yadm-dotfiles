@@ -1,0 +1,12 @@
+- hosts: localhost
+  become: true
+  tasks:
+  - name: Install snaps
+    command: snap install {{item}}
+    with_items:
+      - vlc
+      - gimp
+      - libreoffice
+      - telegram-desktop
+      - skype
+
