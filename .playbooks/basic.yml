@@ -13,5 +13,7 @@
       - less
       - git-doc
       - git-email
+      - tlp
+      - tlp-rdw
         # - ubuntu-restricted-extras tem q desabilitar a tela de autorização
 

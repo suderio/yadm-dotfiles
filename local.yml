@@ -7,6 +7,8 @@
 # Execution
 # sudo ansible-pull -U https://github.com/suderio/dotfiles.git
 
-- hosts: localhost
-  become: true
-      
+---
+- include_playbook: .playbooks/basic.yml
+- include_playbook: .playbooks/gnome.yml
+- include_playbook: .playbooks/apps.yml
+
