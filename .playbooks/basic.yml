@@ -13,4 +13,5 @@
       - less
       - git-doc
       - git-email
-      
+        # - ubuntu-restricted-extras tem q desabilitar a tela de autorização
+

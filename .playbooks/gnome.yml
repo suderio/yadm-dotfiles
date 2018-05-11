@@ -6,4 +6,4 @@
     with_items:
       - vim-gtk3
       - guake
-
+      - gnome-tweak-tool
