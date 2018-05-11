@@ -8,7 +8,7 @@
 # sudo ansible-pull -U https://github.com/suderio/dotfiles.git
 
 ---
-- include_playbook: .playbooks/basic.yml
-- include_playbook: .playbooks/gnome.yml
-- include_playbook: .playbooks/apps.yml
+- import_playbook: .playbooks/basic.yml
+- import_playbook: .playbooks/gnome.yml
+- import_playbook: .playbooks/apps.yml
 
