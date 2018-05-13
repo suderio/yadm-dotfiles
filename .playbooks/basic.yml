@@ -15,5 +15,7 @@
       - git-email
       - tlp
       - tlp-rdw
+      - docker.io
+      - docker-doc
         # - ubuntu-restricted-extras tem q desabilitar a tela de autorização
 
