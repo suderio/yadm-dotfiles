@@ -5,6 +5,7 @@
     package: name={{item}}
     with_items:
       - htop
+      - yadm
       - curl
       - wget
       - vim
