@@ -10,4 +10,7 @@
       - nodejs
       - npm
       - yarn
+  # sudo npm install -g npm@latest
+  # sudo npm install -g @angular/cli
+  # npm install -g ionic
 
