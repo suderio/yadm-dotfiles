@@ -8,5 +8,6 @@
     package: name={{item}}
     with_items:
       - nodejs
+      - npm
       - yarn
 
