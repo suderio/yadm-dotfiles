@@ -5,10 +5,12 @@
     package: name={{item}}
     with_items:
       - htop
+      - curl
+      - wget
       - vim
       - vim-doc
       - vim-scripts
-      - git
+      - xclip
       - patch
       - less
       - git-doc

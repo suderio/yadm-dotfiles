@@ -1,0 +1,9 @@
+- hosts: localhost
+  become: true
+  tasks:
+  # acrescentar curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+  - name: Install packages
+    package: name={{item}}
+    with_items:
+      - nodejs 
+

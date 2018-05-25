@@ -15,4 +15,5 @@
     command: snap install {{item}} --classic
     with_items:
       - skype
+      - vscode
 
