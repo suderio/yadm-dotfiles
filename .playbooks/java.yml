@@ -13,6 +13,6 @@
       - ant-doc 
       - maven
   - name: Install snaps
-    command: snap install {{item}}
+    command: snap install {{item}} --classic
     with_items:
       - android-studio
