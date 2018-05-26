@@ -1,0 +1,14 @@
+- hosts: localhost
+  become: true
+  tasks:
+  - name: Install packages
+    package: name={{item}}
+    with_items:
+      - default-jdk 
+      - default-jdk-doc 
+      - openjdk-11-demo 
+      - openjdk-11-source 
+      - visualvm 
+      - ant 
+      - ant-doc 
+      - maven

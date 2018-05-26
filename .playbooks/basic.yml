@@ -35,4 +35,5 @@
       - flex-doc 
       - m4-doc
         # - ubuntu-restricted-extras tem q desabilitar a tela de autorização
+        # yadm clone git@github.com:suderio/dotfiles.git
 

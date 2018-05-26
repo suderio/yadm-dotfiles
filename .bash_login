@@ -4,7 +4,6 @@ if [ -f "$HOME/.profile" ]; then
 fi
 
 ### configura o login - vdm quando executar o bashrc ###
-#!/bin/sh
 
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
