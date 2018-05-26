@@ -22,3 +22,12 @@
   #- name: Verifica ambiente
   #  become: no
   #  assert: { that: "'{{ lookup('env', 'HOME') }}/Repos/depot_tools' is search('{{ lookup('env', 'PATH') }}'')" }
+
+  # echo '=== FIX UP SUDO ==='
+##http://www.chromium.org/tips-and-tricks-for-chromium-os-developers#TOC-Making-sudo-a-little-more-permissive
+#cat<<SUDO1 | sudo tee /etc/sudoers.d/relax_requirements
+#Defaults !tty_tickets # Entering your password in one shell affects all shells
+#Defaults timestamp_timeout=180 # Minutes between re-requesting your password
+#SUDO1
+#sudo chmod 0440 /etc/sudoers.d/relax_requirements
+
