@@ -19,6 +19,6 @@
     git:
       repo: https://chromium.googlesource.com/chromium/tools/depot_tools.git
       dest: "{{ lookup('env', 'HOME') }}/Repos/depot_tools"
-  - name: Verifica ambiente
-    become: no
-    assert: { that: "{{ lookup('env', 'HOME') }}/Repos/depot_tools in {{ lookup('env', 'PATH') }}" }
+  #- name: Verifica ambiente
+  #  become: no
+  #  assert: { that: "'{{ lookup('env', 'HOME') }}/Repos/depot_tools' is search('{{ lookup('env', 'PATH') }}'')" }

@@ -2,3 +2,7 @@
 if [ -f "$HOME/.local/bin/.prompt" ]; then
   . "$HOME/.local/bin/.prompt"
 fi
+
+if [ -f "$HOME/.local/bin/.builds" ]; then
+  . "$HOME/.local/bin/.builds"
+fi
