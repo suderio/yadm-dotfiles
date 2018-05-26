@@ -15,6 +15,7 @@
       - python-virtualenv 
       - python-oauth2client
   - name: Clone depot-tools
+    become: no
     git:
       repo: https://chromium.googlesource.com/chromium/tools/depot_tools.git
       dest: "{{ lookup('env', 'HOME') }}/Repos"
