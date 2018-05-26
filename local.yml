@@ -13,4 +13,5 @@
 - import_playbook: .playbooks/apps.yml
 - import_playbook: .playbooks/js.yml
 - import_playbook: .playbooks/java.yml
+- import_playbook: .playbooks/chromiuim-build.yml
 

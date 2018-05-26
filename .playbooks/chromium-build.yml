@@ -1,0 +1,20 @@
+- hosts: localhost
+  become: true
+  tasks:
+  - name: Install packages
+    package: name={{item}}
+    with_items:
+      - git-core 
+      - gitk 
+      - git-gui 
+      - subversion 
+      - curl 
+      - lvm2 
+      - thin-provisioning-tools 
+      - python-pkg-resources 
+      - python-virtualenv 
+      - python-oauth2client
+  - name: Clone depot-tools
+    git:
+      repo: https://chromium.googlesource.com/chromium/tools/depot_tools.git
+      dest: "{{ lookup('env', 'HOME') }}/Repos"

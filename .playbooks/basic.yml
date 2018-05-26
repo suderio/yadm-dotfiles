@@ -9,23 +9,25 @@
       - curl
       - wget
       - vim
-      - vim-doc
       - vim-scripts
       - xclip
       - patch
       - less
-      - git-doc
       - git-email
       - tlp
       - tlp-rdw
       - docker.io
-      - docker-doc
       - gcc 
       - make 
       - perl 
       - automake 
       - flex 
-      - bison 
+      - bison
+      - lyx
+      - emacs
+      - vim-doc
+      - git-doc
+      - docker-doc
       - gcc-doc 
       - make-doc 
       - glibc-doc 
