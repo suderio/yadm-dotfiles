@@ -36,6 +36,7 @@
       - build-essential 
       - flex-doc 
       - m4-doc
+      - git-flow
         # - ubuntu-restricted-extras tem q desabilitar a tela de autorização
         # yadm clone git@github.com:suderio/dotfiles.git
 
