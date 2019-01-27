@@ -1,0 +1,92 @@
+- hosts: localhost
+  become: true
+  tasks:
+  - name: Install packages (basic)
+    package: name={{item}}
+    with_items:
+      - htop
+      - yadm
+      - curl
+      - wget
+      - tlp
+      - tlp-rdw
+      - vim
+      - vim-scripts
+      - xclip
+      - patch
+      - less
+      - cntlm
+      - p7zip-full
+      - googler
+      - cowsay
+      - fortune
+      - software-properties-common
+  - name: Install packages (devel)
+    package: name={{item}}
+    with_items:
+      - git
+      - git-email
+      - git-flow
+      - gcc 
+      - make 
+      - perl 
+      - automake 
+      - flex 
+      - bison
+        #- lyx
+      - emacs
+      - meld
+      - graphviz
+      - docker.io
+      - build-essential
+      - nodejs
+      - npm
+      - consul
+      - gulp
+  - name: Install packages (java)
+    package: name={{item}}
+    with_items:
+      - default-jdk 
+      - default-jdk-doc 
+      - openjdk-11-demo 
+      - openjdk-11-source 
+      - visualvm 
+      - ant 
+      - maven
+      - jmeter
+  - name: Install packages (docs)
+    package: name={{item}}
+    with_items:
+      - vim-doc
+      - git-doc
+      - docker-doc
+      - gcc-doc 
+      - make-doc 
+      - glibc-doc 
+      - autoconf-doc 
+      - bison-doc 
+      - flex-doc 
+      - m4-doc
+      - ant-doc 
+  - name: Install snaps
+    command: snap install {{item}}
+    with_items: 
+      - firefox
+      - chromium
+      - chromium-ffmpeg
+      - insomnia
+      - notepad-plus-plus
+  - name: Install classic snaps
+    command: snap install {{item}} --classic
+    with_items: 
+      - eclipse
+      - vscode
+      - netbeans
+  - name: Script to start xforwarding of snap apps 
+    lineinfile:
+      path: /home/hoot/.local/bin/start
+      line: XAUTHORITY=/home/hoot/.Xauthority $1
+      create: yes
+      mode: u=rwx,g=rwx,o=r
+      owner: hoot
+      group: hoot
