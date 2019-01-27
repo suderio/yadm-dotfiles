@@ -33,7 +33,7 @@
       - automake 
       - flex 
       - bison
-        #- lyx
+      - lyx
       - emacs
       - meld
       - graphviz
@@ -67,7 +67,8 @@
       - bison-doc 
       - flex-doc 
       - m4-doc
-      - ant-doc 
+      - ant-doc
+      - imagemagick-doc 
   - name: Install snaps
     command: snap install {{item}}
     with_items: 
@@ -90,3 +91,14 @@
       mode: u=rwx,g=rwx,o=r
       owner: hoot
       group: hoot
+  - name: Install google-drive-ocamlfuse repo
+    apt_repository: 
+      repo: ppa:alessandro-strada/ppa
+  - name: google drive client
+    package: name=google-drive-ocamlfuse
+  - name: Calibre
+    package: name=calibre
+  - name: PCManFM
+    package: name=pcmanfm
+  - name: Midnight Commander
+    package: name=mc

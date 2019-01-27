@@ -6,3 +6,6 @@ fi
 if [ -f "$HOME/.local/bin/.builds" ]; then
   . "$HOME/.local/bin/.builds"
 fi
+
+mount | grep "${HOME}/gdrive" >/dev/null || /usr/bin/google-drive-ocamlfuse "${HOME}/gdrive"
+
