@@ -92,7 +92,11 @@
       mode: u=rwx,g=rwx,o=r
       owner: hoot
       group: hoot
-  - name: Copy using the 'content' for inline data
+  - name: virtual box host
+    lineinfile: 
+      path: /etc/hosts
+      line: 10.111.30.35    vboxhost
+  - name: autocomplete para o start
     copy:
       content: |
               _start()
