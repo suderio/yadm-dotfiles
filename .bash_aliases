@@ -6,8 +6,8 @@ alias path='echo -e ${PATH//:/\\n}'
 alias now='date +"%T"'
 alias nowtime=now
 alias nowdate='date +"%d-%m-%Y"'
-alias update='yum update'
-alias updatey='yum -y update'
+alias update='sudo apt update && sudo apt upgrade'
+alias updatey='sudo apt update && sudo apt -y upgrade'
 alias rut='sudo -i'
 alias su='sudo -i'
 

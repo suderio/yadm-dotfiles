@@ -1,1 +1,2 @@
+XAUTHORITY=/home/hoot/.Xauthority $1 &
 XAUTHORITY=/home/hoot/.Xauthority $1

@@ -2,6 +2,8 @@
 defshell -bash
 # # Disable visual bell
 vbell off
+bell_msg
+
 # # Set scrollback buffer to 10000
 defscrollback 10000
 #
