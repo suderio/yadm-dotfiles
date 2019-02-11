@@ -105,7 +105,7 @@
                   COMPREPLY=()
                   cur="${COMP_WORDS[COMP_CWORD]}"
                   prev="${COMP_WORDS[COMP_CWORD-1]}"
-                  opts="eclipse vscode chromium firefox insomnia gvim lyx meld emacs visualvm nodepad-plus-plus netbeans calibre pcmanfm stacer"
+                  opts="eclipse vscode chromium firefox insomnia gvim lyx meld emacs visualvm notepad-plus-plus netbeans calibre pcmanfm stacer"
                   if [[ ${cur} == * ]] ; then
                       COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
                       return 0
@@ -142,4 +142,8 @@
   - name: Install stacer
     package: name=stacer
 
-# TODO datagrip postman intelij goland vivaldi nexus3
+# TODO datagrip postman intelij goland vivaldi nexus3 tmux -screen <log reader?> <pcmanfmqt?>
+# TODO eclipse.ini e alias/startup do eclipse
+# https://thoughtbot.com/blog/migrating-from-screen-to-tmux
+# configurar proxy automático, proxy apt, proxy do docker, executar docker sem sudo
+#
