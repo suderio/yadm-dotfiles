@@ -146,4 +146,7 @@
 # TODO eclipse.ini e alias/startup do eclipse
 # https://thoughtbot.com/blog/migrating-from-screen-to-tmux
 # configurar proxy automático, proxy apt, proxy do docker, executar docker sem sudo
+# configurar cowsay (hoot.cow)
+# mover /home para outro disco
+# criar swap (para hibernar)
 #
