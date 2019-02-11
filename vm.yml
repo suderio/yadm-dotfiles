@@ -149,4 +149,5 @@
 # configurar cowsay (hoot.cow)
 # mover /home para outro disco
 # criar swap (para hibernar)
+# settings.xml do maven (proxy, nexus)
 #
