@@ -87,7 +87,7 @@
   - name: Script to start xforwarding of snap apps 
     lineinfile:
       path: /home/hoot/.local/bin/start
-      line: XAUTHORITY=/home/hoot/.Xauthority $1
+      line: XAUTHORITY=/home/hoot/.Xauthority $1 &
       create: yes
       mode: u=rwx,g=rwx,o=r
       owner: hoot
