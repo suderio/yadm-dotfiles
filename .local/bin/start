@@ -1,1 +1,2 @@
+export ECLIPSE_HOME=/home/hoot/eclipse-workspace
 XAUTHORITY=/home/hoot/.Xauthority $1 &
