@@ -61,3 +61,4 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 alias eclipse='eclipse --launcher.ini /home/hoot/eclipse-workspace/eclipse.ini'
 
+alias vinx='vim -X'

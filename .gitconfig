@@ -35,11 +35,24 @@
 	changed = yellow bold
 	untracked = red bold
 
-[diff]
-	tool = vimdiff
+[merge]
+        tool = vimdiff
+        guitool = meld
+        ff = false
 
-[difftool]
-	prompt = false
+[mergetool "meld"]
+        cmd = meld $LOCAL $BASE $REMOTE --output=$MERGED
+        trustExitCode = false
+
+[diff]
+        tool = vimdiff
+        guitool = meld
+        algorithm = histogram
+
+[difftool "meld"]
+        cmd = meld $LOCAL $REMOTE
+        trustExitCode = false
+        path = D:/bndes-java-env/diffTools/WinMerge-2.14.0-exe/WinMergeU.exe
 
 [github]
 	user = suderio
@@ -52,4 +65,25 @@
 	versiontag = v
 
 [alias]
-	tree = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches
+     tree = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches
+     # List commits in short form, with colors and branch/tag annotations                                           
+     ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate                            
+     # List commits showing changed files                                                                           
+     ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat                  
+     # List with no colors                                                                                          
+     lnc = log --pretty=format:"%h\\ %s\\ [%cn]"                                                                    
+     # List oneline commits showing dates                                                                           
+     lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short        
+     # List oneline commits showing relative dates                                                                  
+     ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative      
+     # default look for short git log                                                                               
+     le = log --oneline --decorate                                                                                  
+     # all commits related to a file                                                                                
+     filelog = log -u                                                                                               
+     # Show modified files in last commit                                                                           
+     dl = "!git ll -1"                                                                                              
+     # Show a diff last commit                                                                                      
+     dlc = diff --cached HEAD^                                                                                      
+     # Find a file path in codebase                                                                                 
+     find = "!git ls-files | grep -i"                                                                               
+

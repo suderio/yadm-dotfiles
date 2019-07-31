@@ -71,19 +71,26 @@
       - ant-doc
       - imagemagick-doc 
   - name: Install snaps
-    command: snap install {{item}}
-    with_items: 
-      - firefox
-      - chromium
-      - chromium-ffmpeg
-      - insomnia
-      - notepad-plus-plus
+    snap: 
+      name: 
+        - firefox
+        - chromium
+        - chromium-ffmpeg
+        - insomnia
+        - notepad-plus-plus
   - name: Install classic snaps
-    command: snap install {{item}} --classic
-    with_items: 
-      - eclipse
-      - vscode
-      - netbeans
+    snap:
+      name: 
+        - eclipse
+        - code
+        - netbeans
+        - intellij-idea-community
+      classic: yes
+  - name: Uninstall unused snaps
+    snap:
+      name:
+        - vscode
+      state: absent
   - name: Script to start xforwarding of snap apps 
     lineinfile:
       path: /home/hoot/.local/bin/start
@@ -105,7 +112,7 @@
                   COMPREPLY=()
                   cur="${COMP_WORDS[COMP_CWORD]}"
                   prev="${COMP_WORDS[COMP_CWORD-1]}"
-                  opts="eclipse vscode chromium firefox insomnia gvim lyx meld emacs visualvm notepad-plus-plus netbeans calibre pcmanfm stacer"
+                  opts="eclipse code chromium firefox insomnia gvim lyx meld emacs visualvm notepad-plus-plus netbeans calibre pcmanfm stacer intellij"
                   if [[ ${cur} == * ]] ; then
                       COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
                       return 0
