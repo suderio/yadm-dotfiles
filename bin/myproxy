@@ -1,0 +1,5 @@
+export http_proxy=http://vboxhost:3128
+export https_proxy=http://vboxhost:3128
+export HTTP_PROXY=http://vboxhost:3128
+export HTTPS_PROXY=http://vboxhost:3128
+

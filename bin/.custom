@@ -1,0 +1,11 @@
+
+if [ -f "$HOME/bin/.prompt" ]; then
+  . "$HOME/bin/.prompt"
+fi
+
+if [ -f "$HOME/bin/.builds" ]; then
+  . "$HOME/bin/.builds"
+fi
+
+# mount | grep "${HOME}/gdrive" >/dev/null || /usr/bin/google-drive-ocamlfuse "${HOME}/gdrive"
+

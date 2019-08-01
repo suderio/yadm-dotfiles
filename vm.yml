@@ -157,4 +157,7 @@
 # mover /home para outro disco
 # criar swap (para hibernar)
 # settings.xml do maven (proxy, nexus)
+# inxi screenfetch ansiweather
+# xfstt x11-xfs-utils xfonts-scalable xfonts-base
+# ubuntu-restricted-extras libavcodec-extra ttf-mscorefonts-installer unrar
 #
