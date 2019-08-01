@@ -52,7 +52,6 @@
 [difftool "meld"]
         cmd = meld $LOCAL $REMOTE
         trustExitCode = false
-        path = D:/bndes-java-env/diffTools/WinMerge-2.14.0-exe/WinMergeU.exe
 
 [github]
 	user = suderio

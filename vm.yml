@@ -112,7 +112,7 @@
                   COMPREPLY=()
                   cur="${COMP_WORDS[COMP_CWORD]}"
                   prev="${COMP_WORDS[COMP_CWORD-1]}"
-                  opts="eclipse code chromium firefox insomnia gvim lyx meld emacs visualvm notepad-plus-plus netbeans calibre pcmanfm stacer intellij"
+                  opts="eclipse code chromium firefox insomnia gvim lyx meld emacs visualvm notepad-plus-plus netbeans calibre pcmanfm stacer intellij-idea-community"
                   if [[ ${cur} == * ]] ; then
                       COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
                       return 0
