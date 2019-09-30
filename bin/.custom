@@ -1,3 +1,4 @@
+#!/bin/bash
 
 if [ -f "$HOME/bin/.prompt" ]; then
   . "$HOME/bin/.prompt"
@@ -10,4 +11,8 @@ fi
 HISTCONTROL=ignoreboth
 
 # mount | grep "${HOME}/gdrive" >/dev/null || /usr/bin/google-drive-ocamlfuse "${HOME}/gdrive"
+
+test_iso_2022_locking_scape() {
+  echo -e "\033(0"
+}
 
