@@ -100,5 +100,18 @@ fi
 # If command don't exists, search repos
 source /usr/share/doc/pkgfile/command-not-found.bash
 
-source ~/bin/.custom
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
 
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
+if [ -f "$HOME/bin/.custom" ]; then
+  . "$HOME/bin/.custom"
+fi
+
+[[ -z "$TMUX" ]] && exec tmux
