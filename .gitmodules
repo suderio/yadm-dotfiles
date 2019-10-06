@@ -1,3 +1,6 @@
 [submodule ".tmux/plugins/tpm"]
 	path = .tmux/plugins/tpm
 	url = git@github.com:tmux-plugins/tpm.git
+[submodule ".local/share/nvim/site/pack/plugins/start/vimroom"]
+	path = .local/share/nvim/site/pack/plugins/start/vimroom
+	url = git@github.com:mikewest/vimroom.git
