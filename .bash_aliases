@@ -10,6 +10,16 @@ alias update='sudo apt update && sudo apt upgrade'
 alias updatey='sudo apt update && sudo apt -y upgrade'
 alias rut='sudo -i'
 alias su='sudo -i'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias ls='ls --color=auto'
+alias ll='ls -alh'
+alias la='ls -A'
+alias l='ls -CFlh'
+alias dir='dir --color=auto'
+alias vdir='vdir --color=auto'
+alias lsd="ls -alF | grep /$"
 
 alias greset='git clean -f && git reset --hard'
 
