@@ -114,4 +114,4 @@ if [ -f "$HOME/bin/.custom" ]; then
   . "$HOME/bin/.custom"
 fi
 
-[[ -z "$TMUX" ]] && exec tmux
+[[ -z "$TMUX" ]] && exec tmux new-session -A -s $USER
