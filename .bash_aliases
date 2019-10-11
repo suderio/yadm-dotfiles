@@ -73,4 +73,5 @@ alias eclipse='eclipse --launcher.ini /home/hoot/eclipse-workspace/eclipse.ini'
 
 alias vinx='vim -X'
 alias intellij=intellij-idea-community
+alias vim='nvim'
 
