@@ -94,11 +94,10 @@ if ! shopt -oq posix; then
 fi
 
 
-#export http_proxy=http://192.168.56.1:3128
-#export https_proxy=$http_proxy
-
 # If command don't exists, search repos
-source /usr/share/doc/pkgfile/command-not-found.bash
+if [ -f "/usr/share/doc/pkgfile/command-not-found.bash" ] ; then
+  . "/usr/share/doc/pkgfile/command-not-found.bash"
+fi
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
