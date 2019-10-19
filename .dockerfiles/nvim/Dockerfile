@@ -3,10 +3,6 @@ LABEL MAINTAINER="Paulo Suderio <paulo.suderio@bndes.gov.br>"
 LABEL DESCRIPTION="Ambiente de desenvolvimento"
 LABEL APPLICATION="nvim"
 
-ARG proxy=http://proxy01.bndes.net:8080
-ARG no_proxy=localhost,127.0.0.1
-ENV HTTP_PROXY=$proxy HTTPS_PROXY=$proxy NO_PROXY=$no_proxy http_proxy=$proxy https_proxy=$proxy no_proxy=$no_proxy
-
 
 # Better terminal support
 ENV TERM screen-256color
