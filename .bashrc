@@ -112,5 +112,8 @@ fi
 if [ -f "$HOME/bin/.custom" ]; then
   . "$HOME/bin/.custom"
 fi
+if [ -f "$HOME/bin/myproxy" ]; then
+  . "$HOME/bin/myproxy"
+fi
 
 alias restmux='[[ -z "$TMUX" ]] && exec tmux new-session -A -s $USER'

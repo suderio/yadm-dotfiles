@@ -7,10 +7,32 @@
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
 	excludesfile = ~/.gitignore
 	autocrlf = false
+	safecrlf = warn
 	filemode = false
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[gc]
+	auto = 7000
+
+[grep]
+	lineNumber = true
+
+[status]
+	showUntrackedFiles = all
 
 [web]
 	browser = google-chrome
+
+[pull]
+	rebase = true
+
+[rebase]
+	autoStash = true
 
 [push]
 	default = matching

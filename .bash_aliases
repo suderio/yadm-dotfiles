@@ -75,3 +75,5 @@ alias vinx='vim -X'
 alias intellij=intellij-idea-community
 alias vim='nvim'
 
+alias apt-installed="comm -23 <(apt-mark showmanual | sort -u) <(gzip -dc /var/log/installer/initial-status.gz | sed -n 's/^Package: //p' | sort -u)"
+
