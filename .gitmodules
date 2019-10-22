@@ -1,18 +1,4 @@
 [submodule ".tmux/plugins/tpm"]
 	path = .tmux/plugins/tpm
-	url = git@github.com:tmux-plugins/tpm.git
-[submodule ".local/share/nvim/site/pack/plugins/start/vimroom"]
-	path = .local/share/nvim/site/pack/plugins/start/vimroom
-	url = git@github.com:mikewest/vimroom.git
-[submodule ".local/share/nvim/site/pack/plugins/start/vim-pandoc"]
-	path = .local/share/nvim/site/pack/plugins/start/vim-pandoc
-	url = git@github.com:vim-pandoc/vim-pandoc.git
-[submodule ".local/share/nvim/site/pack/plugins/start/vim-pandoc-syntax"]
-	path = .local/share/nvim/site/pack/plugins/start/vim-pandoc-syntax
-	url = git@github.com:vim-pandoc/vim-pandoc-syntax.git
-[submodule ".local/share/nvim/site/pack/plugins/start/vim-surround"]
-	path = .local/share/nvim/site/pack/plugins/start/vim-surround
-	url = git@github.com:tpope/vim-surround.git
-[submodule ".local/share/nvim/site/pack/plugins/start/vim-polyglot"]
-	path = .local/share/nvim/site/pack/plugins/start/vim-polyglot
-	url = git@github.com:sheerun/vim-polyglot.git
+    url = git@github.com:tmux-plugins/tpm.git
+
