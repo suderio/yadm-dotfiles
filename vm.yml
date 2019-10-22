@@ -149,9 +149,6 @@
     #      path: /etc/hosts
     #      line: 10.111.30.35    vboxhost
  
-# TODO nexus3 tmux -screen <log reader?> 
-# TODO eclipse.ini e alias/startup do eclipse
-# https://thoughtbot.com/blog/migrating-from-screen-to-tmux
 # configurar proxy automático, proxy apt, proxy do docker, executar docker sem sudo
 # configurar cowsay (hoot.cow)
 # mover /home para outro disco
