@@ -109,11 +109,11 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-if [ -f "$HOME/bin/.custom" ]; then
-  . "$HOME/bin/.custom"
+if [ -f "$HOME/bin/custom" ]; then
+  . "$HOME/bin/custom"
 fi
-if [ -f "$HOME/bin/myproxy" ]; then
-  . "$HOME/bin/myproxy"
+if [ -f "$HOME/bin/local" ]; then
+  . "$HOME/bin/local"
 fi
 
 alias restmux='[[ -z "$TMUX" ]] && exec tmux new-session -A -s $USER'

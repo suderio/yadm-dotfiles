@@ -1,14 +1,12 @@
 #!/bin/bash
 
-if [ -f "$HOME/bin/.prompt" ]; then
-  . "$HOME/bin/.prompt"
+if [ -f "$HOME/bin/prompt" ]; then
+  . "$HOME/bin/prompt"
 fi
 
-if [ -f "$HOME/bin/.builds" ]; then
-  . "$HOME/bin/.builds"
+if [ -f "$HOME/bin/builds" ]; then
+  . "$HOME/bin/builds"
 fi
-
-HISTCONTROL=ignoreboth
 
 export LESS=-R
 export LESS_TERMCAP_mb=$'\E[1;31m'     # begin blink
