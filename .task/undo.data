@@ -11,3 +11,7 @@ new [description:"teste de análise de crédito" entry:"1571843688" modified:"15
 time 1571843715
 new [description:"teste de Jurídico" entry:"1571843715" modified:"1571843715" project:"HBL" status:"pending" uuid:"86b1133b-08c1-45d8-8545-b31e20ba03d9"]
 ---
+time 1571861866
+old [description:"resolver upload de arquivos no hbl" entry:"1571843202" modified:"1571843548" project:"HBL" status:"pending" uuid:"a91df237-377f-40cc-85eb-546beea59adf"]
+new [description:"resolver upload de arquivos no hbl" end:"1571861866" entry:"1571843202" modified:"1571861866" project:"HBL" status:"completed" uuid:"a91df237-377f-40cc-85eb-546beea59adf"]
+---
