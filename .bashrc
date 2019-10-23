@@ -108,12 +108,23 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
-
 if [ -f "$HOME/bin/custom" ]; then
   . "$HOME/bin/custom"
 fi
 if [ -f "$HOME/bin/local" ]; then
   . "$HOME/bin/local"
 fi
-
-alias restmux='[[ -z "$TMUX" ]] && exec tmux new-session -A -s $USER'
+if [ -f "$HOME/bin/prompt" ]; then
+  . "$HOME/bin/prompt"
+fi
+if [ -f "$HOME/bin/builds" ]; then
+  . "$HOME/bin/builds"
+fi
+export LESS=-R
+export LESS_TERMCAP_mb=$'\E[1;31m'     # begin blink
+export LESS_TERMCAP_md=$'\E[1;36m'     # begin bold
+export LESS_TERMCAP_me=$'\E[0m'        # reset bold/blink
+export LESS_TERMCAP_so=$'\E[01;44;33m' # begin reverse video
+export LESS_TERMCAP_se=$'\E[0m'        # reset reverse video
+export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
+export LESS_TERMCAP_ue=$'\E[0m'        # reset underline

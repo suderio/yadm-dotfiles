@@ -1,0 +1,13 @@
+time 1571843202
+new [description:"resolver upload de arquivos no hbl" entry:"1571843202" modified:"1571843202" status:"pending" uuid:"a91df237-377f-40cc-85eb-546beea59adf"]
+---
+time 1571843548
+old [description:"resolver upload de arquivos no hbl" entry:"1571843202" modified:"1571843202" status:"pending" uuid:"a91df237-377f-40cc-85eb-546beea59adf"]
+new [description:"resolver upload de arquivos no hbl" entry:"1571843202" modified:"1571843548" project:"HBL" status:"pending" uuid:"a91df237-377f-40cc-85eb-546beea59adf"]
+---
+time 1571843688
+new [description:"teste de análise de crédito" entry:"1571843688" modified:"1571843688" project:"HBL" status:"pending" uuid:"8696fe78-8a01-4190-b4a8-d45ab76d3c04"]
+---
+time 1571843715
+new [description:"teste de Jurídico" entry:"1571843715" modified:"1571843715" project:"HBL" status:"pending" uuid:"86b1133b-08c1-45d8-8545-b31e20ba03d9"]
+---
