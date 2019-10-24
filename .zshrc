@@ -59,6 +59,18 @@ COMPLETION_WAITING_DOTS="true"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
 HIST_STAMPS="yyyy-mm-dd"
+# compinstall
+zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
+zstyle :compinstall filename '/home/hoot/.zshrc'
+autoload -Uz compinit
+compinit
+
+# Lines configured by zsh-newuser-install
+HISTSIZE=10000
+SAVEHIST=10000
+setopt autocd extendedglob nomatch
+unsetopt appendhistory beep notify
+bindkey -v
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
