@@ -37,6 +37,8 @@
       - flex-doc 
       - m4-doc
       - git-flow
+      - tmux
+      - neovim  
         # - ubuntu-restricted-extras tem q desabilitar a tela de autorização
         # yadm clone git@github.com:suderio/dotfiles.git
 
