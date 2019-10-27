@@ -8,3 +8,6 @@
 [submodule ".local/share/zsh/plugins/zsh-syntax-highlighting"]
 	path = .local/share/zsh/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "/home/paulo/.emacs.d"]
+	path = /home/paulo/.emacs.d
+	url = https://github.com/syl20bnr/spacemacs
