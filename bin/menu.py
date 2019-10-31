@@ -13,7 +13,7 @@ def main():
     menu.add("g", "gvim", run, ["gvim"])
     menu.add("l", "lyx", run, ["lyx"])
     menu.add("m", "meld", run, ["meld"])
-    menu.add("e", "emacs", run, ["emacs"])
+    menu.add("x", "emacs", run, ["emacs"])
     menu.add("n", "notepad++", run, ["notepad-plus-plus"])
     menu.add("b", "netbeans", run, ["netbeans"])
     menu.add("p", "pcmanfm", run, ["pcmanfm"])

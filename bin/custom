@@ -41,5 +41,6 @@ function fawk {
 
 function start {
     export ECLIPSE_HOME=/home/hoot/eclipse-workspace
-    XAUTHORITY=/home/hoot/.Xauthority $1 &
+    export XAUTHORITY=/home/hoot/.Xauthority
+    menu.py $1
 }
