@@ -99,15 +99,6 @@ if [ -f "/usr/share/doc/pkgfile/command-not-found.bash" ] ; then
   . "/usr/share/doc/pkgfile/command-not-found.bash"
 fi
 
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
-fi
-
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
 if [ -f "$HOME/bin/custom" ]; then
   . "$HOME/bin/custom"
 fi
