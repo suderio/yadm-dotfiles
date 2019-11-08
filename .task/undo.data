@@ -15,3 +15,6 @@ time 1571861866
 old [description:"resolver upload de arquivos no hbl" entry:"1571843202" modified:"1571843548" project:"HBL" status:"pending" uuid:"a91df237-377f-40cc-85eb-546beea59adf"]
 new [description:"resolver upload de arquivos no hbl" end:"1571861866" entry:"1571843202" modified:"1571861866" project:"HBL" status:"completed" uuid:"a91df237-377f-40cc-85eb-546beea59adf"]
 ---
+time 1572645641
+new [description:"Fazer fork do tema e reapontar o submodulo para permitir customização" entry:"1572645641" modified:"1572645641" project:"CLI" status:"pending" uuid:"fb0901b5-6802-470b-be57-b48fe8e1f8c8"]
+---
