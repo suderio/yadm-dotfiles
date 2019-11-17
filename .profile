@@ -25,3 +25,7 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
+# set PATH to include snaps
+if [ -d "/snap/bin" ] ; then
+    PATH="/snap/bin:$PATH"
+fi

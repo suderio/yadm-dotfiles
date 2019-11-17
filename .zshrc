@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 [[ -d $ZSH/custom/themes/spaceship-prompt ]] || git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH/custom/themes/spaceship-prompt"
 
-[[ -h $ZSH/custom/themes/spaceship.zsh-theme ]] || ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH/custom/themes/spaceship.zsh-theme"
+[[ -h $ZSH/custom/themes/spaceship.zsh-theme ]] || ln -s "$ZSH/custom/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH/custom/themes/spaceship.zsh-theme"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -103,10 +103,6 @@ if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
   export EDITOR='emacs'
-fi
-# Configuração do tilix
-if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-  source /etc/profile.d/vte.sh
 fi
 
 # Compilation flags
