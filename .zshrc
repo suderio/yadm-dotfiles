@@ -5,7 +5,8 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 # Install spaceship theme
-
+# isso roda antes da configuração de proxy e dá erro!!!
+# !!! corrigir !!!
 [[ -d $ZSH/custom/themes/spaceship-prompt ]] || git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH/custom/themes/spaceship-prompt"
 
 [[ -h $ZSH/custom/themes/spaceship.zsh-theme ]] || ln -s "$ZSH/custom/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH/custom/themes/spaceship.zsh-theme"
@@ -122,7 +123,7 @@ fi
 # Custom functions
 [[ -f $HOME/bin/custom ]] && source $HOME/bin/custom
 
-# Syntax highlighting
+# Local configuration
 [[ -f $HOME/bin/local ]] && source $HOME/bin/local
 
 source .local/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
