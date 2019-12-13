@@ -78,8 +78,8 @@ esac
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+if [ -f ~/bin/aliases ]; then
+    . ~/bin/aliases
 fi
 
 # enable programmable completion features (you don't need to enable
@@ -94,24 +94,28 @@ if ! shopt -oq posix; then
 fi
 
 
-#export http_proxy=http://192.168.56.1:3128
-#export https_proxy=$http_proxy
-
 # If command don't exists, search repos
-source /usr/share/doc/pkgfile/command-not-found.bash
-
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
+if [ -f "/usr/share/doc/pkgfile/command-not-found.bash" ] ; then
+  . "/usr/share/doc/pkgfile/command-not-found.bash"
 fi
 
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
+if [ -f "$HOME/bin/custom" ]; then
+  . "$HOME/bin/custom"
 fi
-
-if [ -f "$HOME/bin/.custom" ]; then
-  . "$HOME/bin/.custom"
+if [ -f "$HOME/bin/local" ]; then
+  . "$HOME/bin/local"
 fi
-
-[[ -z "$TMUX" ]] && exec tmux new-session -A -s $USER
+if [ -f "$HOME/bin/prompt" ]; then
+  . "$HOME/bin/prompt"
+fi
+if [ -f "$HOME/bin/builds" ]; then
+  . "$HOME/bin/builds"
+fi
+export LESS=-R
+export LESS_TERMCAP_mb=$'\E[1;31m'     # begin blink
+export LESS_TERMCAP_md=$'\E[1;36m'     # begin bold
+export LESS_TERMCAP_me=$'\E[0m'        # reset bold/blink
+export LESS_TERMCAP_so=$'\E[01;44;33m' # begin reverse video
+export LESS_TERMCAP_se=$'\E[0m'        # reset reverse video
+export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
+export LESS_TERMCAP_ue=$'\E[0m'        # reset underline

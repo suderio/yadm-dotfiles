@@ -69,8 +69,13 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 # temporario, melhorar isso!!!
 
-alias eclipse='eclipse --launcher.ini /home/hoot/eclipse-workspace/eclipse.ini'
+alias eclipse='eclipse --launcher.ini /home/hoot/.config/eclipse/eclipse.ini'
 
 alias vinx='vim -X'
 alias intellij=intellij-idea-community
+alias vim='nvim'
+
+alias apt-installed="comm -23 <(apt-mark showmanual | sort -u) <(gzip -dc /var/log/installer/initial-status.gz | sed -n 's/^Package: //p' | sort -u)"
+
+alias restmux='[[ -z "$TMUX" ]] && exec tmux new-session -A -s $USER'
 
