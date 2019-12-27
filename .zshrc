@@ -13,7 +13,7 @@ export ZSH="$HOME/.oh-my-zsh"
 [[ -h $ZSH/custom/themes/spaceship.zsh-theme ]] || ln -s "$ZSH/custom/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH/custom/themes/spaceship.zsh-theme"
 
 # Spacevim (melhor instalar via script)
-[[ -d $HOME/.SpaceVim ]] || curl -sLf https://spacevim.org/install.sh | zsh
+[[ -d $HOME/.SpaceVim ]] || curl -sLf https://spacevim.org/install.sh | sh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
