@@ -70,6 +70,7 @@ COMPLETION_WAITING_DOTS="true"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
 HIST_STAMPS="yyyy-mm-dd"
+
 # compinstall
 zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
 zstyle :compinstall filename '/home/hoot/.zshrc'
@@ -91,7 +92,7 @@ bindkey -v
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git mvn web-search z command-not-found tmux git-flow)
+plugins=(git mvn web-search z command-not-found tmux git-flow docker extract)
 # docker extract ng node npm yarn
 
 source $ZSH/oh-my-zsh.sh
@@ -133,3 +134,6 @@ source .local/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.
 SPACESHIP_PROMPT_SEPARATE_LINE='false'
 SPACESHIP_USER_SHOW='needed'
 SPACESHIP_HOST_SHOW='false'
+
+# autocomplete de ssh usando known_hosts
+zstyle -e ':completion:*:(ssh|scp|sftp|rsh|rsync):hosts' hosts 'reply=(${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) /dev/null)"}%%[# ]*}//,/ })'
