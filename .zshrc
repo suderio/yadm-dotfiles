@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:/snap/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/snap/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -74,6 +74,11 @@ HIST_STAMPS="yyyy-mm-dd"
 # compinstall
 zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
 zstyle :compinstall filename '/home/hoot/.zshrc'
+
+zstyle -e ':completion:*:hosts' hosts 'reply=(
+  ${${${(@M)${(f)"$(<${HOME}/.ssh/config)"}:#Host *}#Host }:#*[*?]*}
+)'
+zstyle ':completion:*:*:*:hosts' ignored-patterns 'ip6*' 'localhost*'
 autoload -Uz compinit
 compinit
 
@@ -128,12 +133,10 @@ fi
 # Local configuration
 [[ -f $HOME/bin/local ]] && source $HOME/bin/local
 
-source .local/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[[ -f $HOME/.local/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && source $HOME/.local/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # spaceship them configuration
 SPACESHIP_PROMPT_SEPARATE_LINE='false'
 SPACESHIP_USER_SHOW='needed'
 SPACESHIP_HOST_SHOW='false'
 
-# autocomplete de ssh usando known_hosts
-zstyle -e ':completion:*:(ssh|scp|sftp|rsh|rsync):hosts' hosts 'reply=(${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) /dev/null)"}%%[# ]*}//,/ })'

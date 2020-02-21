@@ -45,4 +45,5 @@ function start {
     menu.py $1
 }
 
+[[ -f /usr/share/virtualenvwrapper/virtualenvwrapper.sh ]] && source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 
