@@ -4,8 +4,7 @@ export PATH=$HOME/bin:/usr/local/bin:/snap/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-# Custom functions (precisa executar aqui para conseguir configurar proxy quando necessário)
-[[ -f $HOME/bin/custom ]] && source $HOME/bin/custom
+find $HOME/bin -iname "*.sh" | while read shell_script; do echo "Executando $shell_script"; source $shell_script; done
 
 # Install spaceship theme
 [[ -d $ZSH/custom/themes/spaceship-prompt ]] || git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH/custom/themes/spaceship-prompt"
@@ -129,9 +128,6 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 [[ -f $ZSH_CUSTOM/aliases.zsh ]] || ln -s $HOME/bin/aliases $ZSH_CUSTOM/aliases.zsh
-
-# Local configuration
-[[ -f $HOME/bin/local ]] && source $HOME/bin/local
 
 [[ -f $HOME/.local/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && source $HOME/.local/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 

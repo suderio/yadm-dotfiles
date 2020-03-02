@@ -73,14 +73,9 @@ xterm*|rxvt*)
     ;;
 esac
 
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+find $HOME/bin -iname *.bash | while read bash_script ; do echo "Executando $bash_script" ; source $bash_script ; done
+find $HOME/bin -iname "*.sh" | while read shell_script; do echo "Executando $shell_script"; source $shell_script; done
 
-if [ -f ~/bin/aliases ]; then
-    . ~/bin/aliases
-fi
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -93,24 +88,11 @@ if ! shopt -oq posix; then
   fi
 fi
 
-
 # If command don't exists, search repos
 if [ -f "/usr/share/doc/pkgfile/command-not-found.bash" ] ; then
   . "/usr/share/doc/pkgfile/command-not-found.bash"
 fi
 
-if [ -f "$HOME/bin/custom" ]; then
-  . "$HOME/bin/custom"
-fi
-if [ -f "$HOME/bin/local" ]; then
-  . "$HOME/bin/local"
-fi
-if [ -f "$HOME/bin/prompt" ]; then
-  . "$HOME/bin/prompt"
-fi
-if [ -f "$HOME/bin/builds" ]; then
-  . "$HOME/bin/builds"
-fi
 export LESS=-R
 export LESS_TERMCAP_mb=$'\E[1;31m'     # begin blink
 export LESS_TERMCAP_md=$'\E[1;36m'     # begin bold
