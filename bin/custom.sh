@@ -47,3 +47,5 @@ function start {
 
 [[ -f /usr/share/virtualenvwrapper/virtualenvwrapper.sh ]] && source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 
+# por algum motivo isso não é carregado pelo bash do rhel
+grep -qi rhel /etc/os-release && source ~/.bash_completion
