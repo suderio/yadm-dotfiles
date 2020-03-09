@@ -127,7 +127,7 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-[[ -f $ZSH_CUSTOM/aliases.zsh ]] || ln -s $HOME/bin/aliases $ZSH_CUSTOM/aliases.zsh
+[[ -f $ZSH_CUSTOM/aliases.zsh ]] || ln -s $HOME/bin/aliases.sh $ZSH_CUSTOM/aliases.zsh
 
 [[ -f $HOME/.local/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && source $HOME/.local/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
