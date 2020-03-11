@@ -2,57 +2,84 @@
 !! Colorscheme
 !
 !! special
-!*.foreground: #93a1a1
-!*.background: #141c21
-!*.cursorColor: #afbfbf
-!
-!! black
-!*.color0: #263640
-!*.color8: #4a697d
-!
-!! red
-!*.color1: #d12f2c
-!*.color9: #fa3935
-!
-!! green
-!*.color2: #819400
-!*.color10: #a4bd00
-!
-!! yellow
-!*.color3: #b08500
-!*.color11: #d9a400
-!
-!! blue
-!*.color4: #2587cc
-!*.color12: #2ca2f5
-!
-!! magenta
-!*.color5: #696ebf
-!*.color13: #8086e8
-!
-!! cyan
-!*.color6: #289c93
-!*.color14: #33c5ba
-!
-!! white
-!*.color7: #bfbaac
-!*.color15: #fdf6e3
+*.foreground: #93a1a1
+*.background: #141c21
+*.cursorColor: #afbfbf
+
+! black
+*.color0: #263640
+*.color8: #4a697d
+
+! red
+*.color1: #d12f2c
+*.color9: #fa3935
+
+! green
+*.color2: #819400
+*.color10: #a4bd00
+
+! yellow
+*.color3: #b08500
+*.color11: #d9a400
+
+! blue
+*.color4: #2587cc
+*.color12: #2ca2f5
+
+! magenta
+*.color5: #696ebf
+*.color13: #8086e8
+
+! cyan
+*.color6: #289c93
+*.color14: #33c5ba
+
+! white
+*.color7: #bfbaac
+*.color15: #fdf6e3
 
 
 !! fontes para urxvt
-!URxvt.font:                     xft:DejaVu Sans Mono:autohint=true:size=12
-!URxvt.boldFont:                 xft:DejaVu Sans Mono:autohint=true:bold:size=12
-!URxvt.italicFont:               xft:DejaVu Sans Mono:autohint=true:italic:size=12
-!URxvt.boldItalicFont:           xft:DejaVu Sans Mono:autohint=true:bold:italic:size=12
-!URxvt.letterSpace: 0
-!URxvt.lineSpace: 0
-!URxvt.geometry: 92x24
-!URxvt.internalBorder: 24
-!URxvt.cursorBlink: true
-!URxvt.cursorUnderline: false
-!URxvt.saveline: 2048
-!URxvt.scrollBar: false
-!URxvt.scrollBar_right: false
-!URxvt.urgentOnBell: true
-!URxvt.depth: 24
-!URxvt.iso14755: false
+URxvt.font:                     xft:Noto Mono for Powerline:autohint=true:size=10
+URxvt.boldFont:                 xft:DejaVu Sans Mono for Powerline:autohint=true:bold:size=10
+URxvt.italicFont:               xft:DejaVu Sans Mono for Powerline:autohint=true:italic:size=10
+URxvt.boldItalicFont:           xft:DejaVu Sans Mono for Powerline:autohint=true:bold:italic:size=10
+URxvt.letterSpace: 0
+URxvt.lineSpace: 0
+URxvt.internalBorder: 2
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: false
+URxvt.saveline: 2048
+URxvt.depth: 24
+URxvt.iso14755: false
+URxvt*termName: screen-256color
+URxvt*geometry: 140x70
+URxvt*loginShell: true
+URxvt*scrollColor: #777777
+URxvt*scrollstyle: plain
+URxvt*scrollTtyKeypress: true
+URxvt*scrollTtyOutput: false
+URxvt*scrollWithBuffer: false
+URxvt*secondaryScreen: true
+URxvt*secondaryScroll: true
+URxvt*skipScroll: true
+URxvt*scrollBar: false
+URxvt*scrollBar_right: false
+URxvt*scrollBar_floating: false
+URxvt*fading: 30
+URxvt*utmpInhibit: false
+URxvt*urgentOnBell: false
+URxvt*visualBell: true
+URxvt*mapAlert: true
+URxvt*mouseWheelScrollPage: false
+URxvt*background: Black
+URxvt*foreground: White
+URxvt*colorUL: yellow
+URxvt*underlineColor: yellow
+URxvt*saveLines: 0
+URxvt*buffered: true
+URxvt*hold: false
+URxvt*internalBorder:
+URxvt*print-pipe: cat > $HOME/$(echo urxvt.dump.$(date +'%Y%M%d%H%m%S'))
+URxvt*perl-ext-common:
+URxvt*perl-ext:
