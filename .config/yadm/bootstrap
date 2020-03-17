@@ -8,7 +8,9 @@ echo "Init submodules"
 yadm submodule update --recursive --init
 
 # Install basic packages
-sudo apt install vim python ansible emacs neovim
+sudo apt update -y
+sudo apt upgrade -y
+sudo apt install -y vim python ansible emacs neovim
 
 # Install SpaceVim
 [[ -d $HOME/.SpaceVim ]] || bash $HOME/bin/spacevim_install.sh
