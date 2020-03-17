@@ -10,8 +10,8 @@ yadm submodule update --recursive --init
 # Install basic packages
 sudo apt update -y
 sudo apt upgrade -y
-sudo apt install -y vim python ansible emacs neovim
+sudo apt install -y vim python ansible emacs neovim fontconfig xfonts-utils
 
 # Install SpaceVim
-[[ -d $HOME/.SpaceVim ]] || bash $HOME/bin/spacevim_install.sh
+[[ -d $HOME/.SpaceVim ]] || bash $HOME/bin/spacevim_install
 
