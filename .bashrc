@@ -72,10 +72,6 @@ xterm*|rxvt*)
 *)
     ;;
 esac
-echo -e "\e[2m"
-find $HOME/bin -iname *.bash | while read bash_script ; do echo "Executando $bash_script" ; source $bash_script ; done
-find $HOME/bin -iname "*.sh" | while read shell_script; do echo "Executando $shell_script"; source $shell_script; done
-echo -e "\e[22m"
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -103,3 +99,8 @@ export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
 export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 
 
+echo -e "\e[2m"
+. "$HOME/bin/aliases.sh"
+. "$HOME/bin/custom.sh"
+. "$HOME/bin/prompt.bash"
+echo -e "\e[22m"

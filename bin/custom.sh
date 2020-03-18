@@ -1,5 +1,5 @@
 #!/bin/sh
-
+echo "loading custom functions"
 google_drive() {
   mount | grep "${HOME}/gdrive" >/dev/null || /usr/bin/google-drive-ocamlfuse "${HOME}/gdrive"
 }

@@ -1,5 +1,5 @@
 #!/bin/sh
-
+echo "loading aliases"
 # User specific aliases and functions
 alias diff='colordiff'
 alias path='echo -e ${PATH//:/\\n}'
