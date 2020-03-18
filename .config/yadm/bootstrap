@@ -4,14 +4,25 @@
 # be run from within $HOME (assuming this is the root of your dotfiles)
 cd "$HOME"
 
-echo "Init submodules"
-yadm submodule update --recursive --init
+echo "Clone base repos"
+mkdir $HOME/repos
+cd $HOME/repos
+
+git clone --depth 1 git@github.com:riobard/bash-powerline.git
+ln -s $HOME/repos/bash-powerline/bash-powerline.sh $HOME/bin/prompt.bash
+
+git clone --depth 1 git@github.com:riobard/zsh-powerline.git
+ln -s $HOME/repos/zsh-powerline/zsh-powerline.sh $HOME/bin/prompt.zsh
+
+git clone --depth 1 git@github.com:tmux-plugins/tpm.git
+ln -s $HOME/repos/tpm $HOME/.tmux/plugins/tpm
+
+git clone --depth 1 git@github.com:SpaceVim/SpaceVim.git
+bash $HOME/repos/SpaceVim/docs/install.sh
 
 # Install basic packages
 sudo apt update -y
 sudo apt upgrade -y
-sudo apt install -y vim python ansible emacs neovim fontconfig xfonts-utils
+sudo apt install -y vim python ansible emacs neovim fontconfig xfonts-utils tmux zsh
 
-# Install SpaceVim
-[[ -d $HOME/.SpaceVim ]] || bash $HOME/bin/spacevim_install
 
