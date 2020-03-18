@@ -8,7 +8,7 @@ cd "$HOME"
 # Install basic packages
 sudo apt update -y
 sudo apt upgrade -y
-sudo apt install -y vim python ansible emacs neovim fontconfig xfonts-utils tmux zsh
+sudo apt install -y vim python ansible emacs neovim fontconfig xfonts-utils tmux zsh build-essential
 
 # Create some needed dirs
 mkdir -p $HOME/.ssh/config.d
