@@ -40,7 +40,7 @@
 
 
 !! fontes para urxvt
-URxvt.font:                     xft:Noto Mono for Powerline:autohint=true:size=10
+URxvt.font:                     xft:DejaVu Sans Mono for Powerline:autohint=true:size=10
 URxvt.boldFont:                 xft:DejaVu Sans Mono for Powerline:autohint=true:bold:size=10
 URxvt.italicFont:               xft:DejaVu Sans Mono for Powerline:autohint=true:italic:size=10
 URxvt.boldItalicFont:           xft:DejaVu Sans Mono for Powerline:autohint=true:bold:italic:size=10

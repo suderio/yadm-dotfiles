@@ -102,5 +102,11 @@ export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 echo -e "\e[2m"
 . "$HOME/bin/aliases.sh"
 . "$HOME/bin/custom.sh"
-. "$HOME/bin/prompt.bash"
 echo -e "\e[22m"
+
+powerline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+. /usr/share/powerline/bindings/bash/powerline.sh
+
+

@@ -17,16 +17,6 @@ mkdir -p $HOME/.tmux/plugins
 mkdir -p $HOME/repos
 cd $HOME/repos
 
-if [ ! -d $HOME/repos/bash-powerline ]; then
-  git clone --depth 1 https://github.com/riobard/bash-powerline.git
-  ln -s $HOME/repos/bash-powerline/bash-powerline.sh $HOME/bin/prompt.bash
-fi
-
-if [ ! -d $HOME/repos/zsh-powerline ]; then
-git clone --depth 1 https://github.com/riobard/zsh-powerline.git
-ln -s $HOME/repos/zsh-powerline/zsh-powerline.sh $HOME/bin/prompt.zsh
-fi
-
 if [ ! -d $HOME/repos/tpm ]; then
 git clone --depth 1 https://github.com/tmux-plugins/tpm.git
 ln -s $HOME/repos/tpm $HOME/.tmux/plugins/tpm
