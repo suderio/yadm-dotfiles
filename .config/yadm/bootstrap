@@ -5,16 +5,6 @@
 cd "$HOME"
 # yadm commands here
 
-# Install basic packages
-# (deve ficar no ansible)
-
-if command -v apt > /dev/null 2>&1; then
-  sudo apt update -y
-  sudo apt upgrade -y
-  sudo apt install -y vim python ansible emacs neovim fontconfig xfonts-utils tmux zsh build-essential urxvt x11-xserver-utils
-else
-  echo "???"
-fi
 # Create some needed dirs
 mkdir -p $HOME/.ssh/config.d
 touch $HOME/.ssh/config.d/hosts
@@ -24,23 +14,33 @@ mkdir -p $HOME/.tmux/plugins
 
 # Clone base repos
 
-mkdir $HOME/repos
+mkdir -p $HOME/repos
 cd $HOME/repos
 
-git clone --depth 1 git@github.com:riobard/bash-powerline.git
-ln -s $HOME/repos/bash-powerline/bash-powerline.sh $HOME/bin/prompt.bash
+if [ ! -d $HOME/repos/bash-powerline ]; then
+  git clone --depth 1 https://github.com/riobard/bash-powerline.git
+  ln -s $HOME/repos/bash-powerline/bash-powerline.sh $HOME/bin/prompt.bash
+fi
 
-git clone --depth 1 git@github.com:riobard/zsh-powerline.git
+if [ ! -d $HOME/repos/zsh-powerline ]; then
+git clone --depth 1 https://github.com/riobard/zsh-powerline.git
 ln -s $HOME/repos/zsh-powerline/zsh-powerline.sh $HOME/bin/prompt.zsh
+fi
 
-git clone --depth 1 git@github.com:tmux-plugins/tpm.git
+if [ ! -d $HOME/repos/tpm ]; then
+git clone --depth 1 https://github.com/tmux-plugins/tpm.git
 ln -s $HOME/repos/tpm $HOME/.tmux/plugins/tpm
+fi
 
-git clone --depth 1 git@github.com:SpaceVim/SpaceVim.git
+if [ ! -d $HOME/repos/SpaceVim ]; then
+git clone --depth 1 https://github.com/SpaceVim/SpaceVim.git
 bash $HOME/repos/SpaceVim/docs/install.sh
+fi
 
+if [ ! -d $HOME/repos/fonts ]; then
 git clone --depth 1 https://github.com/powerline/fonts.git
 bash $HOME/repos/fonts/install.sh
+fi
 
 
 
