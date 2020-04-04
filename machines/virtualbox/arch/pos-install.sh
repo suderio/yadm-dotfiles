@@ -4,32 +4,29 @@ useradd -m -G adm paulo
 
 #passwd paulo
 
+pacman -Sy pacman-contrib sudo openssh aurphan git pckgfile git base-devel
+
 #visudo
 
-pacman -Sy pacman-contrib
 #rankmirrors
 
-pacman -Sy openssh
+#sshd_config
+
 systemctl enable sshd
-
-###
-
-pacman -Sy aurphan
 
 ### X
 # lspci | grep -e VGA -e 3D
 pacman -Sy xf86-video-vmware
 pacman -Sy xorg-server xorg-apps xorg
-#pacman -Sy awesome
 
-### basics
+# yay
+mkdir ~/repos
+cd repos
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
 
-pacman -Sy git pkgfile
 
+pacman -Sy byobu neovim emacs powerline terminator rxvt-unicode powerline-fonts elinks
 
-Server = https://mirror.osbeck.com/archlinux/
-Server = http://ftp.sh.cvut.cz/arch/
-Server = http://arch.jensgutermuth.de/
-Server = http://mirror.cyberbits.eu/archlinux/
-Server = http://mirror.ubrco.de/archlinux/
-
+yadm clone git@github.com:suderio/dotfiles.git
