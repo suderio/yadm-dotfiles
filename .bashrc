@@ -89,6 +89,11 @@ if [ -f "/usr/share/doc/pkgfile/command-not-found.bash" ] ; then
   . "/usr/share/doc/pkgfile/command-not-found.bash"
 fi
 
+# Jump around through most used dirs
+if [ -f "/etc/profile.d/autojump.bash" ] ; then
+  . "/etc/profile.d/autojump.bash"
+fi
+
 export LESS=-R
 export LESS_TERMCAP_mb=$'\E[1;31m'     # begin blink
 export LESS_TERMCAP_md=$'\E[1;36m'     # begin bold
@@ -109,4 +114,6 @@ POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
 . /usr/share/powerline/bindings/bash/powerline.sh
 
+## Path
 
+export PATH=$PATH:$HOME/.local/bin
