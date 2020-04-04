@@ -6,6 +6,8 @@ useradd -m -G adm paulo
 
 pacman -Sy pacman-contrib sudo openssh aurphan git pckgfile git base-devel
 
+pkgfile -u
+
 #visudo
 
 #rankmirrors
@@ -27,6 +29,6 @@ cd yay
 makepkg -si
 
 
-pacman -Sy byobu neovim emacs powerline terminator rxvt-unicode powerline-fonts elinks
+pacman -Sy byobu neovim ripgrep clang tar fd pandoc emacs powerline terminator rxvt-unicode powerline-fonts elinks
 
 yadm clone git@github.com:suderio/dotfiles.git
