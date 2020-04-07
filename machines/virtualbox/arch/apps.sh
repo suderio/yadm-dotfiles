@@ -13,7 +13,7 @@ systemctl start systemd-timesyncd
 
 # cli
 yay -Syu autojump-git
-pacman -S htop shellcheck
+pacman -S htop shellcheck tree
 
 # containers
 pacman -Syu docker docker-compose

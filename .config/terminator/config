@@ -1,27 +1,28 @@
 [global_config]
-  tab_position = hidden
-  scroll_tabbar = True
   homogeneous_tabbar = False
-  title_use_system_font = False
+  scroll_tabbar = True
+  tab_position = hidden
   title_font = Source Code Pro for Powerline 9
+  title_use_system_font = False
 [keybindings]
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      profile = default
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
 [profiles]
   [[default]]
     background_darkness = 0.8
     background_type = transparent
+    copy_on_selection = True
     cursor_color = "#aaaaaa"
     font = Source Code Pro for Powerline 10
-    show_titlebar = False
     scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
     use_system_font = False
-    copy_on_selection = True
-[layouts]
-  [[default]]
-    [[[window0]]]
-      type = Window
-      parent = ""
-    [[[child1]]]
-      type = Terminal
-      parent = window0
-      profile = default
-[plugins]
