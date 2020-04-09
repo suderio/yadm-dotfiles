@@ -71,7 +71,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 alias eclipse='eclipse --launcher.ini /home/hoot/.config/eclipse/eclipse.ini'
 
-alias vinx='vim -X'
+alias vin='nvim'
 alias intellij=intellij-idea-community
 alias apt-installed="comm -23 <(apt-mark showmanual | sort -u) <(gzip -dc /var/log/installer/initial-status.gz | sed -n 's/^Package: //p' | sort -u)"
 
