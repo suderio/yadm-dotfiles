@@ -33,5 +33,10 @@ fi
 
 # set PATH to include cargo
 if [ -d "/home/paulo/.cargo/bin" ] ; then
-    PATH="/home/paulo/.cargo/bin:$PATH"
+    PATH="$HOME/.cargo/bin:$PATH"
+fi
+
+# set PATH to include go
+if [ -d "/home/paulo/go/bin" ] ; then
+    PATH="$HOME/go/bin:$PATH"
 fi

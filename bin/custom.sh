@@ -47,4 +47,3 @@ function start {
 # por algum motivo isso não é carregado pelo bash do rhel
 [[ -f /etc/os-release ]] && grep -qi rhel /etc/os-release && source ~/.bash_completion
 
-
