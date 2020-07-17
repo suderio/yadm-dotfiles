@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openbox_menu xmlns="http://openbox.org/3.4/menu">
   <menu id="apps-accessories-menu" label="Accessories">
+    <item label="Htop">
+      <action name="Execute">
+        <command>terminator -T htop -e htop</command>
+      </action>
+    </item>
+    <item label="Iftop">
+      <action name="Execute">
+        <command>sudo terminator -T iftop -e iftop</command>
+        <startupnotify>
+          <enabled>yes </enabled>
+        </startupnotify>
+      </action>
+    </item>
+    <item label="Iotop">
+      <action name="Execute">
+        <command>terminator -T iotop -e iotop</command>
+      </action>
+    </item>
+    <item label="Ntop">
+      <action name="Execute">
+        <command>terminator -T ntop -e ntop</command>
+      </action>
+    </item>
     <item label="Remmina">
       <action name="Execute">
         <command>remmina</command>
@@ -8,14 +31,25 @@
     </item>
   </menu>
   <menu id="apps-editors-menu" label="Editors">
+    <item label="VSCode">
+      <action name="Execute">
+        <command>code</command>
+        <startupnotify>
+          <enabled>yes </enabled>
+        </startupnotify>
+      </action>
+    </item>
     <item label="Intellij">
       <action name="Execute">
         <command>idea</command>
+        <startupnotify>
+          <enabled>yes </enabled>
+        </startupnotify>
       </action>
     </item>
     <item label="Neovim">
       <action name="Execute">
-        <command>nvim</command>
+        <command>terminator -T neovim -e nvim</command>
         <startupnotify>
           <enabled>yes</enabled>
           <wmclass>GVim</wmclass>
@@ -64,6 +98,14 @@
         </startupnotify>
       </action>
     </item>
+    <item label="Elinks">
+      <action name="Execute">
+        <command>terminator -T elinks -e elinks</command>
+        <startupnotify>
+          <enabled>yes </enabled>
+        </startupnotify>
+      </action>
+    </item>
     <item label="Firefox">
       <action name="Execute">
         <command>firefox</command>
@@ -73,12 +115,11 @@
         </startupnotify>
       </action>
     </item>
-    <item label="Opera">
+    <item label="Rainbowstream">
       <action name="Execute">
-        <command>opera</command>
+        <command>terminator -T rainbowstream -e rainbowstream</command>
         <startupnotify>
-          <enabled>yes</enabled>
-          <wmclass>Opera</wmclass>
+          <enabled>yes </enabled>
         </startupnotify>
       </action>
     </item>
@@ -92,39 +133,39 @@
     </item>
   </menu>
   <menu id="apps-office-menu" label="Office">
+    <item label="Evince">
+      <action name="Execute">
+        <command>evince</command>
+      </action>
+    </item>
     <item label="OpenOffice Base">
       <action name="Execute">
-        <command>ooffice -base</command>
+        <command>/opt/openoffice4/program/sbase</command>
       </action>
     </item>
     <item label="OpenOffice Calc">
       <action name="Execute">
-        <command>ooffice -calc</command>
+        <command>/opt/openoffice4/program/scalc</command>
       </action>
     </item>
     <item label="OpenOffice Draw">
       <action name="Execute">
-        <command>ooffice -draw</command>
+        <command>/opt/openoffice4/program/sdraw</command>
       </action>
     </item>
     <item label="OpenOffice Impress">
       <action name="Execute">
-        <command>ooffice -impress</command>
+        <command>/opt/openoffice4/program/simpress</command>
       </action>
     </item>
     <item label="OpenOffice Math">
       <action name="Execute">
-        <command>ooffice -math</command>
-      </action>
-    </item>
-    <item label="OpenOffice Printer Administration">
-      <action name="Execute">
-        <command>ooffice-printeradmin</command>
+        <command>/opt/openoffice4/program/smath</command>
       </action>
     </item>
     <item label="OpenOffice Writer">
       <action name="Execute">
-        <command>ooffice -writer</command>
+        <command>/opt/openoffice4/program/swriter</command>
       </action>
     </item>
   </menu>
@@ -136,6 +177,11 @@
           <enabled>yes</enabled>
           <wmclass>MPlayer</wmclass>
         </startupnotify>
+      </action>
+    </item>
+    <item label="MPSyt">
+      <action name="Execute">
+        <command>terminator -T mpsyt -e mpsyt</command>
       </action>
     </item>
     <item label="VLC">
@@ -161,30 +207,6 @@
     <item label="Gimp">
       <action name="Execute">
         <command>gimp</command>
-        <startupnotify>
-          <enabled>yes</enabled>
-        </startupnotify>
-      </action>
-    </item>
-    <item label="Gwenview">
-      <action name="Execute">
-        <command>gwenview</command>
-        <startupnotify>
-          <enabled>yes</enabled>
-        </startupnotify>
-      </action>
-    </item>
-    <item label="Dia Diagram Editor">
-      <action name="Execute">
-        <command>dia</command>
-        <startupnotify>
-          <enabled>yes</enabled>
-        </startupnotify>
-      </action>
-    </item>
-    <item label="Inkscape">
-      <action name="Execute">
-        <command>inkscape</command>
         <startupnotify>
           <enabled>yes</enabled>
         </startupnotify>

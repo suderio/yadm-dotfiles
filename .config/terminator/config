@@ -1,10 +1,22 @@
 [global_config]
-  homogeneous_tabbar = False
-  scroll_tabbar = True
+  borderless = True
   tab_position = hidden
-  title_font = Source Code Pro for Powerline 9
+  scroll_tabbar = True
+  homogeneous_tabbar = False
   title_use_system_font = False
+  title_font = Source Code Pro for Powerline 9
 [keybindings]
+[profiles]
+  [[default]]
+    background_darkness = 0.8
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    font = Source Code Pro for Powerline 10
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_infinite = True
+    use_system_font = False
+    copy_on_selection = True
 [layouts]
   [[default]]
     [[[child1]]]
@@ -15,14 +27,3 @@
       parent = ""
       type = Window
 [plugins]
-[profiles]
-  [[default]]
-    background_darkness = 0.8
-    background_type = transparent
-    copy_on_selection = True
-    cursor_color = "#aaaaaa"
-    font = Source Code Pro for Powerline 10
-    scrollback_infinite = True
-    scrollbar_position = hidden
-    show_titlebar = False
-    use_system_font = False

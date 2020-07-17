@@ -320,10 +320,15 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>Konqueror</name>
+          <name>Pcmanfm</name>
         </startupnotify>
-        <command>kfmclient openProfile filemanagement</command>
+        <command>pcmanfm-qt</command>
       </action>
+    </keybind>
+    <keybind key="W-c">
+        <action name="ShowMenu">
+          <menu>root-menu</menu>
+        </action>
     </keybind>
   </keyboard>
   <mouse>
