@@ -133,9 +133,25 @@
     </item>
   </menu>
   <menu id="apps-office-menu" label="Office">
+    <item label="Calibre">
+      <action name="Execute">
+        <command>calibre</command>
+        <startupnotify>
+          <enabled>yes </enabled>
+        </startupnotify>
+      </action>
+    </item>
     <item label="Evince">
       <action name="Execute">
         <command>evince</command>
+      </action>
+    </item>
+    <item label="FBReader">
+      <action name="Execute">
+        <command>FBReader</command>
+        <startupnotify>
+          <enabled>yes </enabled>
+        </startupnotify>
       </action>
     </item>
     <item label="OpenOffice Base">
@@ -196,7 +212,7 @@
   <menu id="apps-fileman-menu" label="File Managers">
     <item label="PCMan File Manager">
       <action name="Execute">
-        <command>pcmanfm-qt</command>
+        <command>pcmanfm</command>
         <startupnotify>
           <enabled>yes</enabled>
         </startupnotify>
