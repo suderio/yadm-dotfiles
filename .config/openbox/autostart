@@ -15,5 +15,7 @@
 # If you want to use XFCE config tools...
 #
 #xfce-mcs-manager &
+xcompmgr -fF -I-.002 -O-.003 -D6 -cC -t-5 -l-6 -r5 &
 $HOME/bin/wallpaper.sh &
+
 
