@@ -6,24 +6,6 @@
         <command>terminator -T htop -e htop</command>
       </action>
     </item>
-    <item label="Iftop">
-      <action name="Execute">
-        <command>sudo terminator -T iftop -e iftop</command>
-        <startupnotify>
-          <enabled>yes </enabled>
-        </startupnotify>
-      </action>
-    </item>
-    <item label="Iotop">
-      <action name="Execute">
-        <command>terminator -T iotop -e iotop</command>
-      </action>
-    </item>
-    <item label="Ntop">
-      <action name="Execute">
-        <command>terminator -T ntop -e ntop</command>
-      </action>
-    </item>
     <item label="Remmina">
       <action name="Execute">
         <command>remmina</command>
@@ -115,6 +97,14 @@
         </startupnotify>
       </action>
     </item>
+    <item label="Pidgin Instant Messenger">
+      <action name="Execute">
+        <command>pidgin</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+        </startupnotify>
+      </action>
+    </item>
     <item label="Rainbowstream">
       <action name="Execute">
         <command>terminator -T rainbowstream -e rainbowstream</command>
@@ -123,11 +113,11 @@
         </startupnotify>
       </action>
     </item>
-    <item label="Pidgin Instant Messenger">
+    <item label="Slack">
       <action name="Execute">
-        <command>pidgin</command>
+        <command>slack</command>
         <startupnotify>
-          <enabled>yes</enabled>
+          <enabled>yes </enabled>
         </startupnotify>
       </action>
     </item>

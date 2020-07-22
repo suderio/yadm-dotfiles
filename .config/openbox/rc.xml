@@ -315,7 +315,7 @@
         <direction>down</direction>
       </action>
     </keybind>
-    <!-- Keybindings for running applications -->
+<!-- My keybindings -->
     <keybind key="W-e">
       <action name="Execute">
         <startupnotify>
@@ -330,6 +330,25 @@
           <menu>root-menu</menu>
         </action>
     </keybind>
+<keybind key="W-r">
+  <action name="Execute">
+    <command>dmenu_run</command>
+  </action>
+</keybind>
+<!-- A bit of tiling -->
+<keybind key="W-Right">
+  <action name="GrowToEdgeEast"/>
+</keybind>
+<keybind key="W-Left">
+  <action name="GrowToEdgeWest"/>
+</keybind>
+<keybind key="W-Down">
+  <action name="GrowToEdgeSouth"/>
+</keybind>
+<keybind key="W-Up">
+  <action name="GrowToEdgeNorth"/>
+</keybind>
+
   </keyboard>
   <mouse>
     <dragThreshold>1</dragThreshold>

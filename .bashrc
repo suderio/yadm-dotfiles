@@ -117,3 +117,4 @@ POWERLINE_BASH_SELECT=1
 ## Path
 
 export PATH=$PATH:$HOME/.local/bin
+export TERMINAL=/usr/bin/alacritty

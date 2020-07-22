@@ -4,7 +4,7 @@ useradd -m -G adm paulo
 
 #passwd paulo
 
-pacman -Sy pacman-contrib sudo openssh aurphan git pckgfile git base-devel
+pacman -Sy pacman-contrib sudo openssh aurphan git pkgfile git base-devel
 
 pkgfile -u
 

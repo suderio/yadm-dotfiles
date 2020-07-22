@@ -77,3 +77,5 @@ alias apt-installed="comm -23 <(apt-mark showmanual | sort -u) <(gzip -dc /var/l
 alias restmux='[[ -z "$TMUX" ]] && exec tmux new-session -A -s $USER'
 
 alias scan='sudo freshclam && sudo clamscan -roi --exclude-dir="^/sys" '
+
+alias show-dependencies='pacman -Qe | cut -d" " -f 1 | while read in; do pactree -r "$in"; done'
