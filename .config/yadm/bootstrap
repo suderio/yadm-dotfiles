@@ -42,6 +42,7 @@ fi
 if [ ! -d "$HOME/.oh-my-bash/" ]; then
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 ln -s "$HOME/bin/aliases.sh" "$OSH_CUSTOM/aliases/aliases.sh"
+ln -s "$HOME/bin/custom.sh" "$OSH_CUSTOM/plugins/custom.sh"
 fi
 
 # This is for wayland (rxvt)
