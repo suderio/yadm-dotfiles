@@ -66,6 +66,7 @@ completions=(
 aliases=(
   general
   ls
+  aliases
 )
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-bash/plugins/*)
@@ -77,6 +78,7 @@ plugins=(
   bashmarks
   progress
   ansible
+  custom
 )
 
 source $OSH/oh-my-bash.sh
@@ -99,3 +101,18 @@ fi
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+# some modifications
+HISTCONTROL=ignoreboth
+export HISTFILESIZE=20000
+export HISTSIZE=10000
+
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+# Isso e para resolver o bug de acentos no alacritty em wayland
+export TERMINAL=/usr/bin/alacritty
+export LC_ALL=pt_BR.UTF-8
+
+# Created by `userpath` on 2020-07-28 23:09:16
+export PATH="$PATH:/home/paulo/.local/bin"

@@ -9,6 +9,9 @@
 (setq user-full-name "Paulo Sudério"
       user-mail-address "paulo.suderio@gmail.com")
 
+;; Muitas ideias foram retiradas da configuração em
+;; https://tecosaur.github.io/emacs-config/config.html#markdown
+
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
 ;;
@@ -20,7 +23,7 @@
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
 (setq doom-font (font-spec :name "Noto Mono for Powerline" :size 14))
-(setq doom-unicode-font (font-spec :name "DejaVu Sans Mono" :size 20))
+(setq doom-unicode-font (font-spec :name "DejaVu Sans Mono for Powerline" :size 20))
 ;;(setq doom-font (font-spec :family "monospace" :size 14))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
