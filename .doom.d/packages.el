@@ -51,3 +51,7 @@
 ;(package! builtin-package :recipe (:branch "develop"))
 
 (package! bison-mode)
+(package! bbdb :disable t)
+(package! bbdb-vcard :disable t)
+(package! calfw :disable t)
+(package! calfw-ical :disable t)

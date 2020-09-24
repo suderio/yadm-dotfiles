@@ -56,3 +56,22 @@
 ;;
 ;; You can also try 'gd' (or 'C-c g d') to jump to their definition and see how
 ;; they are implemented.
+
+;; Set up bbdb
+;; Exemplo de configuração para calendário e email (notmuch)
+;;(require 'bbdb)
+;;(bbdb-initialize 'message)
+;;(bbdb-insinuate-message)
+;;(add-hook 'message-setup-hook 'bbdb-insinuate-mail)
+;;;; set up calendar
+;;(require 'calfw)
+;;(require 'calfw-ical)
+;;;; Set this to the URL of your calendar. Google users will use
+;;;; the Secret Address in iCalendar Format from the calendar settings
+;;(cfw:open-ical-calendar "https://calendar.google.com/calendar?cid=cGF1bG8uc3VkZXJpb0BnbWFpbC5jb20")
+;;;; Set up notmuch
+;;(require 'notmuch)
+;;;; set up mail sending using sendmail
+;;(setq send-mail-function (quote sendmail-send-it))
+;;(setq user-mail-address "paulo.suderio@gmail.com"
+;;      user-full-name "Paulo Suderio")

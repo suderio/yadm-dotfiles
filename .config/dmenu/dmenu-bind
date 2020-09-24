@@ -1,4 +1,0 @@
-#!/bin/bash
-# -sb active colour
-exe=$(dmenu_run -fn 'Sans Mono-10' -nb '#272C30' -nf '#DDDDDD' -sb '#2975B5' -sf '#DDDDDD') && eval "exec $exe"
-
