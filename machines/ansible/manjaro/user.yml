@@ -20,7 +20,7 @@
       src: $HOME/repos/doom-emacs
       state: link
   - name: Install doom
-    command: ./doom install --no-env
+    command: ./doom install --no-env --yes
     args:
       chdir: $HOME/.emacs.d/bin
       creates: $HOME/.doom.d
