@@ -1,0 +1,48 @@
+- hosts: localhost
+  become: false
+  tasks:
+  - name: Create a directory if it does not exist
+    file:
+      path: $HOME/repos
+      state: directory
+      mode: '0755'
+  - name: Clone / update doom emacs
+    git:
+      repo: https://github.com/hlissner/doom-emacs.git 
+      dest: $HOME/repos/doom-emacs
+      clone: yes
+      update: yes
+      depth: 1
+      accept_hostkey: yes
+  - name: Create a symbolic link to doom
+    file:
+      dest: $HOME/.emacs.d
+      src: $HOME/repos/doom-emacs
+      state: link
+  - name: Install doom
+    command: ./doom install --no-env
+    args:
+      chdir: $HOME/.emacs.d/bin
+      creates: $HOME/.doom.d
+  - name: Clone SpaceVim
+    git:
+      repo: https://github.com/SpaceVim/SpaceVim.git
+      dest: $HOME/repos/SpaceVim
+      clone: yes
+      update: yes
+      depth: 1
+      accept_hostkey: yes
+  - name: Install SpaceVim
+    command: ./install.sh
+    args:
+      chdir: $HOME/repos/SpaceVim/docs
+      creates: $HOME/.SpaceVim
+  - name: Install oh-my-bash
+    command: /usr/share/oh-my-bash/tools/install.sh
+    args:
+      creates: $HOME/.oh-my-bash
+  - name: Clone dotfiles
+    command: yadm clone https://github.com/suderio/dotfiles.git
+    args:
+      chdir: $HOME
+      creates: $HOME/.config/yadm
