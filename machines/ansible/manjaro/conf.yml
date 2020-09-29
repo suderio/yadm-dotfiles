@@ -1,0 +1,138 @@
+- hosts: localhost
+  become: true
+  tasks:
+  - name: Distribution
+    debug: msg={{ ansible_distribution }}
+  - name: Install cli tools
+    package: name={{item}}
+    with_items:
+      - alacritty
+      - htop
+      - curl
+      - wget
+      - vim
+      - xclip
+      - patch
+      - less
+      - docker
+      - docker-compose
+      - tmux
+      - neovim
+      - bat
+      - byobu
+      - cmatrix
+      - clamav
+      - colordiff
+      - elinks
+      - inotify-tools
+      - lynis
+      - pandoc
+      - ncdu
+      - pass
+      - tcpdump
+      - tldr
+      - virtualbox-guest-utils
+      - yay
+      - iftop
+      - iotop
+      - iptraf-ng
+      - github-cli
+      - base-devel # yay needs this
+  - name: Install dev tools
+    package: name={{item}}
+    with_items:
+      - bison
+      - clang
+      - flex
+      - julia
+      - kotlin
+      - gcc
+      - make
+      - automake
+      - perl
+      - python
+      - emacs
+      - go-tools
+      - maven
+  - name: Install desktop apps
+    package: name={{item}}
+    with_items:
+      - calibre
+      - code
+      - lyx
+      - evince
+      - firefox
+      - gimp
+      - gparted
+      - intellij-idea-community-edition
+      - pidgin
+      - remmina
+      - sigil
+      - vlc
+      - plank # only in xfce? this is for mac os theme
+  - name: Create a directory if it does not exist
+    become: false
+    file:
+      path: $HOME/repos
+      state: directory
+      mode: '0755'
+  - name: Doom emacs dependencies
+    package: name={{item}}
+    with_items:
+      - ripgrep
+      - fd
+  - name: Clone / update doom emacs
+    become: false
+    git:
+      repo: https://github.com/hlissner/doom-emacs.git 
+      dest: $HOME/repos/doom-emacs
+      clone: yes
+      update: yes
+      depth: 1
+      accept_hostkey: yes
+  - name: Create a symbolic link to doom
+    become: false
+    file:
+      dest: $HOME/.emacs.d
+      src: $HOME/repos/doom-emacs
+      state: link
+  - name: Install doom
+    become: false
+    command: ./doom install --no-env
+    args:
+      chdir: $HOME/.emacs.d/bin
+      creates: $HOME/.doom.d
+  - name: Clone SpaceVim
+    become: false
+    git:
+      repo: https://github.com/SpaceVim/SpaceVim.git
+      dest: $HOME/repos/SpaceVim
+      clone: yes
+      update: yes
+      depth: 1
+      accept_hostkey: yes
+  - name: Install SpaceVim
+    become: false
+    command: ./install.sh
+    args:
+      chdir: $HOME/repos/SpaceVim/docs
+      creates: $HOME/.SpaceVim
+  - name: Install aur programs
+    become: false
+    command: yay -S --answerclean None --answeredit None --answerdiff None --quiet --noconfirm {{item}}
+    with_items:
+      - aur/yadm
+      - google-drive-ocamlfuse
+      - google-chrome
+      - postman-bin
+      - slack-desktop
+      - zoom
+  - name: Install oh-my-bash
+    become: false
+    command: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
+  - name: Clone dotfiles
+    become: false
+    command: yadm clone https://github.com/suderio/dotfiles.git
+    args:
+      chdir: $HOME
+      creates: $HOME/.config/yadm
