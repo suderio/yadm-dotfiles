@@ -36,6 +36,7 @@
       - iotop
       - iptraf-ng
       - github-cli
+      - powerline-fonts
   - name: Install arch cli tools
     package: name={{item}}
     with_items:
@@ -91,3 +92,8 @@
       - zoom
       - oh-my-bash-git
       - oh-my-zsh-git
+  - name: Install aur doom emacs dependencies
+    become: false
+    command: yay -S --answerclean None --answeredit None --answerdiff None --quiet --noconfirm {{item}}
+    with_items:
+      - ttf-all-the-icons
