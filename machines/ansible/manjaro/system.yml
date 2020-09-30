@@ -90,6 +90,7 @@
       - postman-bin
       - slack-desktop
       - zoom
+      - discord
       - oh-my-bash-git
       - oh-my-zsh-git
   - name: Install aur doom emacs dependencies
