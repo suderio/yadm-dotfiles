@@ -75,6 +75,7 @@
       - remmina
       - sigil
       - vlc
+      - rofi
   - name: Doom emacs dependencies
     package: name={{item}}
     with_items:
@@ -85,7 +86,7 @@
     command: yay -S --answerclean None --answeredit None --answerdiff None --quiet --noconfirm {{item}}
     with_items:
       - aur/yadm
-      - google-drive-ocamlfuse
+        #      - google-drive-ocamlfuse-git
       - google-chrome
       - postman-bin
       - slack-desktop

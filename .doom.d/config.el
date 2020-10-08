@@ -22,7 +22,7 @@
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
-(setq doom-font (font-spec :name "Noto Mono for Powerline" :size 14))
+(setq doom-font (font-spec :name "DejaVu Sans Mono for Powerline" :size 14))
 (setq doom-unicode-font (font-spec :name "DejaVu Sans Mono for Powerline" :size 20))
 ;;(setq doom-font (font-spec :family "monospace" :size 14))
 

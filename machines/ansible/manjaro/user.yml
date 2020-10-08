@@ -1,9 +1,14 @@
 - hosts: localhost
   become: false
   tasks:
-  - name: Create a directory if it does not exist
+  - name: Create repos directory
     file:
       path: $HOME/repos
+      state: directory
+      mode: '0755'
+  - name: Create .ssh/config.d directory
+    file:
+      path: $HOME/.ssh/config.d
       state: directory
       mode: '0755'
   - name: Clone / update doom emacs
@@ -20,7 +25,7 @@
       src: $HOME/repos/doom-emacs
       state: link
   - name: Install doom
-    command: ./doom install --no-env --yes
+    command: ./doom --yes install --no-env
     args:
       chdir: $HOME/.emacs.d/bin
       creates: $HOME/.doom.d
@@ -46,3 +51,8 @@
     args:
       chdir: $HOME
       creates: $HOME/.config/yadm
+  - name: Sync doom
+    command: ./doom sync
+    args:
+      chdir: $HOME/.emacs.d/bin
+
