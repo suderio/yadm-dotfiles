@@ -1,9 +1,0 @@
-- hosts: localhost
-  become: true
-  tasks:
-  - name: Install gnome packages
-    apt: name={{item}}
-    with_items:
-      - vim-gtk3
-      - guake
-      - gnome-tweak-tool
